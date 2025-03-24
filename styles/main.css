@@ -1,11 +1,9 @@
-/* 1. Reset selector */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Body: 700px wide, centered, with a steelblue border, black shadow, and white background */
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 700px;
@@ -16,7 +14,6 @@ body {
     background: white;
 }
 
-/* 3. Header: Gradient background from white to lightsteelblue, with a steelblue bottom border */
 header {
     background: linear-gradient(to bottom, white, lightsteelblue);
     border-bottom: 3px solid steelblue;
@@ -34,12 +31,10 @@ blockquote {
     margin-right: 30px;
 }
 
-/* Add bottom margin to paragraphs for extra spacing */
 p {
     margin-bottom: 10px;
 }
 
-/* Increase spacing around blockquotes */
 blockquote {
     margin: 10px 20px;
     line-height: 1.6;
@@ -57,12 +52,10 @@ header h2 {
     margin: 5px 0 0 0;
 }
 
-/* 4. Links */
 a {
     font-weight: bold;
 }
 
-/* 5. Section styles */
 section {
     margin: 15px 0;
     line-height: 1.5;
@@ -78,20 +71,17 @@ section a:visited {
     text-decoration: none;
 }
 
-/* Existing section links (for other links) */
 section a:link,
 section a:visited {
     color: maroon;
     text-decoration: none;
 }
 
-/* Underline the links inside h3 elements (titles under "What we offer") */
 section h3 a:link,
 section h3 a:visited {
     text-decoration: underline;
 }
 
-/* 6. Aside: Rounded steelblue border, with padding and margin */
 aside {
     border: 2px solid steelblue;
     border-radius: 20px;
@@ -109,7 +99,6 @@ aside ul {
     margin-left: 20px;
 }
 
-/* Update aside links to be underlined */
 aside a:link,
 aside a:visited {
     color: steelblue;
@@ -122,7 +111,6 @@ aside a:focus {
 }
 
 
-/* 7. Footer: Steelblue background, white text, centered, with padding and top margin */
 footer {
     background-color: steelblue;
     color: white;
