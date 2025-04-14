@@ -123,3 +123,66 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+
+nav {
+    background-color: steelblue;
+  }
+  
+  nav ul.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* horizontally centers the menu */
+    align-items: center;     /* vertically centers items within the nav bar */
+    height: 50px;            /* gives the nav some height to help with spacing */
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  nav ul.menu > li {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  nav ul.menu > li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul.menu > li.active a {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px 14px;
+  }
+  
+  nav ul.menu li.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: steelblue;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 1000;
+  }
+  
+  nav ul.menu li.submenu:hover ul {
+    display: block;
+  }
+  
+  nav ul.menu li.submenu ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav ul.menu li.submenu ul li a:hover {
+    background-color: #4682B4;
+  }
+  
