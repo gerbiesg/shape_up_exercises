@@ -107,17 +107,16 @@
     padding: 15px;
     margin-top: 20px;
   }
-  
-  /* Desktop Nav */
+
   .desktop-nav {
     display: none;
     background-color: steelblue;
-    overflow: visible;  /* ensure dropdowns aren’t clipped */
+    overflow: visible;
   }
   
   nav ul.menu {
     list-style: none;
-    display: none;          /* hidden mobile-first */
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -137,13 +136,12 @@
     text-decoration: none;
   }
   
-  nav ul.menu > li.active a {
+  nav ul.menu > li.active > a {
     border: 2px solid white;
-    border-radius: 10px;
-    padding: 4px 14px;
+    border-radius: 8px;
+    padding: 6px 13px;
   }
-  
-  /* Desktop Submenu */
+
   nav ul.menu li.submenu > a {
     cursor: pointer;
   }
@@ -175,8 +173,7 @@
   nav ul.menu li.submenu ul li a:hover {
     background-color: #4682B4;
   }
-  
-  /* Mobile Nav Toggle */
+
   #menu-toggle {
     display: none;
   }
@@ -191,8 +188,7 @@
     cursor: pointer;
     width: 100%;
   }
-  
-  /* Mobile Nav */
+
   .mobile-nav {
     display: none;
     background-color: steelblue;
@@ -224,7 +220,12 @@
     cursor: pointer;
   }
   
-  /* Mobile Submenu System (now scoped to .mobile-nav only) */
+  .mobile-nav ul.main-menu > li.active > a {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 6px 13px;
+  }
+
   .mobile-nav .submenu-toggle {
     display: none;
   }
@@ -255,8 +256,7 @@
   .mobile-nav .submenu li a:hover {
     background-color: #5a90c6;
   }
-  
-  /* Responsive Layout for Desktop */
+
   @media (min-width: 768px) {
     .desktop-nav {
       display: block;
