@@ -1,283 +1,293 @@
-/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
-    font-size: calc(0.8em + 0.5vw);
-    padding: 20px;
-    width: 100%;
-  }
-  
-  /* Header */
-  header {
-    background: linear-gradient(to bottom, white, lightsteelblue);
-    border-bottom: 3px solid steelblue;
-    padding: 20px;
-    overflow: hidden;
-  }
-  
-  header img {
-    float: left;
-    margin-right: 15px;
-    max-width: 120px;
-    min-width: 100px;
-    width: 100%;
-    height: auto;
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-    color: steelblue;
-    font-style: italic;
-    margin: 0;
-  }
-  
-  header h2 {
-    font-size: 1.5em;
-    margin-top: 5px;
-  }
-  
-  /* Layout */
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  
-  section {
-    flex: 2 1 60%;
-    margin: 15px 0;
-    line-height: 1.5;
-  }
-  
-  aside {
-    flex: 1 1 30%;
-    border: 2px solid steelblue;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 15px 0;
-  }
-  
-  aside h2 {
-    color: maroon;
-    margin-bottom: 10px;
-  }
-  
-  aside ul {
-    line-height: 1.5;
-    margin-left: 20px;
-  }
-  
-  aside a:link,
-  aside a:visited {
-    color: steelblue;
-    text-decoration: underline;
-  }
-  
-  aside a:hover,
-  aside a:focus {
-    color: maroon;
-  }
-  
-  blockquote {
-    margin: 10px 20px;
-    line-height: 1.6;
-  }
-  
-  p {
-    margin-bottom: 10px;
-  }
-  
-  section h2 {
-    margin-bottom: 10px;
-  }
-  
-  footer {
-    background-color: steelblue;
-    color: white;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  font-size: calc(0.8em + 0.5vw);
+  padding: 20px;
+  width: 100%;
+}
+
+header {
+  background: linear-gradient(to bottom, white, lightsteelblue);
+  border-bottom: 3px solid steelblue;
+  padding: 20px;
+  overflow: hidden;
+}
+
+header img {
+  float: left;
+  margin-right: 15px;
+  max-width: 120px;
+  min-width: 100px;
+  width: 100%;
+  height: auto;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: steelblue;
+  font-style: italic;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+section {
+  flex: 2 1 60%;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+aside {
+  flex: 1 1 30%;
+  border: 2px solid steelblue;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+aside h2 {
+  color: maroon;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+aside a:link,
+aside a:visited {
+  color: steelblue;
+  text-decoration: underline;
+}
+
+aside a:hover,
+aside a:focus {
+  color: maroon;
+}
+
+blockquote {
+  margin: 10px 20px;
+  line-height: 1.6;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: steelblue;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.desktop-nav {
+  display: none;
+  background-color: steelblue;
+  overflow: visible;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.menu > li {
+  position: relative;
+  margin: 0 10px;
+}
+
+nav ul.menu > li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul.menu > li.active > a {
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 6px 13px;
+}
+
+nav ul.menu li.submenu > a {
+  cursor: pointer;
+}
+
+nav ul.menu li.submenu > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: steelblue;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+nav ul.menu li.submenu:hover > ul {
+  display: block;
+}
+
+nav ul.menu li.submenu ul li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul.menu li.submenu ul li a:hover {
+  background-color: #4682B4;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: block;
+  background: steelblue;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mobile-nav {
+  display: none;
+  background-color: steelblue;
+  position: absolute;
+  width: fit-content;
+}
+
+#menu-toggle:checked + .menu-icon + .mobile-nav {
+  display: block;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  position: relative;
+}
+
+.mobile-nav ul li a,
+.mobile-nav label {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.mobile-nav ul.main-menu > li.active > a {
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 6px 13px;
+}
+
+.mobile-nav .submenu-toggle {
+  display: none;
+}
+
+.mobile-nav .submenu {
+  display: none;
+  background-color: #3b6fa5;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 200px;
+  border-left: 2px solid white;
+  z-index: 1001;
+}
+
+.mobile-nav .submenu-toggle:checked + label + .submenu {
+  display: block;
+}
+
+.mobile-nav .submenu li a {
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.mobile-nav .submenu li a:hover {
+  background-color: #5a90c6;
+}
+
+@media (min-width: 768px) {
   .desktop-nav {
-    display: none;
-    background-color: steelblue;
-    overflow: visible;
+    display: block;
   }
-  
+
   nav ul.menu {
-    list-style: none;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul.menu > li {
-    position: relative;
-    margin: 0 10px;
-  }
-  
-  nav ul.menu > li a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul.menu > li.active > a {
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 6px 13px;
+    display: flex;
   }
 
-  nav ul.menu li.submenu > a {
-    cursor: pointer;
-  }
-  
-  nav ul.menu li.submenu > ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: steelblue;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    z-index: 1000;
-  }
-  
-  nav ul.menu li.submenu:hover > ul {
-    display: block;
-  }
-  
-  nav ul.menu li.submenu ul li a {
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-  
-  nav ul.menu li.submenu ul li a:hover {
-    background-color: #4682B4;
-  }
-
-  #menu-toggle {
-    display: none;
-  }
-  
-  .menu-icon {
-    display: block;
-    background: steelblue;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px;
-    text-align: left;
-    cursor: pointer;
-    width: 100%;
-  }
-
+  #menu-toggle,
+  .menu-icon,
   .mobile-nav {
     display: none;
-    background-color: steelblue;
-    position: absolute;
-    width: fit-content;
-  }
-  
-  #menu-toggle:checked + .menu-icon + .mobile-nav {
-    display: block;
-  }
-  
-  .mobile-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .mobile-nav li {
-    position: relative;
-  }
-  
-  .mobile-nav ul li a,
-  .mobile-nav label {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #fff;
-    cursor: pointer;
-  }
-  
-  .mobile-nav ul.main-menu > li.active > a {
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 6px 13px;
   }
 
-  .mobile-nav .submenu-toggle {
-    display: none;
-  }
-  
-  .mobile-nav .submenu {
-    display: none;
-    background-color: #3b6fa5;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 200px;
-    border-left: 2px solid white;
-    z-index: 1001;
-  }
-  
-  .mobile-nav .submenu-toggle:checked + label + .submenu {
-    display: block;
-  }
-  
-  .mobile-nav .submenu li a {
-    padding: 10px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .mobile-nav .submenu li a:hover {
-    background-color: #5a90c6;
+  main {
+    flex-direction: row;
   }
 
-  @media (min-width: 768px) {
-    .desktop-nav {
-      display: block;
-    }
-  
-    nav ul.menu {
-      display: flex;
-    }
-  
-    #menu-toggle,
-    .menu-icon,
-    .mobile-nav {
-      display: none;
-    }
-  
-    main {
-      flex-direction: row;
-    }
-  
-    aside {
-      margin-left: 20px;
-    }
+  aside {
+    margin-left: 20px;
   }
-  
+}
+
+.red-title {
+  color: maroon;
+}
+
+.highlight {
+  color: maroon;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+main section ul {
+  padding-left: 1.5em;
+}
