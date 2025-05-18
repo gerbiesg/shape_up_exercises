@@ -278,11 +278,11 @@ nav ul.menu li.submenu ul li a:hover {
   }
 }
 
-.red-title {
+.title {
   color: maroon;
 }
 
-.highlight {
+.links {
   color: maroon;
   font-weight: bold;
   text-decoration: underline;
