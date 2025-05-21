@@ -1,0 +1,94 @@
+/* Reset & Overrides */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 0;
+  text-align: center;
+  color: maroon;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  margin-bottom: 1em;
+}
+
+thead th {
+  background-color: steelblue;
+  color: white;
+  padding: 0.5em;
+  text-align: left;
+  border: none;
+}
+
+tbody td {
+  padding: 0.2em;
+  text-align: left;
+  border: none;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+}
+
+tbody td:last-child {
+  text-align: right;
+}
+
+thead th:last-child {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+  table,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display:none;
+  }
+
+  tr {
+    margin: 0 0 0.5rem;
+  }
+
+  tr td:first-child {
+    background: steelblue;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5em;
+  }
+
+  tr td:first-child:empty {
+    display: none;
+  }
+
+  td[data-label="Food"] {
+    font-weight: bold;
+  }
+
+  td {
+    text-align: left !important;
+    padding: 0.35em 0;
+  }
+
+  td[data-label="Calories"]::after {
+    content: " calories";
+  }
+
+  .table-title {
+  margin: 0.5em 0 0;
+  }
+}
