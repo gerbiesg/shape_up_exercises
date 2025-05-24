@@ -1,0 +1,100 @@
+form {
+  max-width: 45rem;
+  margin: 1.5rem auto;
+  line-height: 1.5;
+}
+
+fieldset {
+  border: 2px solid lightgray;
+  border-radius: 12px;
+  padding: 0.5rem 1.25rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  color: maroon;
+  padding: 0 .5rem;
+}
+
+label { display: block; margin-bottom: .75rem; }
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: .5rem .6rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+textarea { resize: vertical; }
+
+.form-question { margin: 1rem 0 .25rem; font-weight: 600; }
+
+.btn {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  color: #fff;
+}
+.btn-submit { background-color: steelblue; }
+.btn-reset  { background-color: maroon; }
+.btn:hover  { background-color: gray; }
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+input:required:invalid {
+  border: 2px solid red;
+}
+
+input:required:valid {
+  border: 2px solid forestgreen;
+}
+
+.form-question + label,
+.form-question + label ~ label
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 1.25rem;
+}
+
+label.restrict-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 1.25rem;
+}
+
+.form-buttons {
+  border: 2px solid lightgray;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.req { color: red; }
+
+@media (min-width: 768px) {
+  main > section form {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
